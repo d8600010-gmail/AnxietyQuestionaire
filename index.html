@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>ASK 反直覺焦慮評估 Dashboard（進階版）</title>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Arial;
+  background: #f4f6f8;
+  margin: 20px;
+}
+h1, h2, h3 {
+  color: #2c3e50;
+}
+.section {
+  background: #ffffff;
+  padding: 18px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.question {
+  margin-bottom: 14px;
+}
+.options {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+.options label {
+  background: #eef2f7;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.options input {
+  margin-right: 4px;
+}
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.result {
+  background: #eef6ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 24px;
+}
+.footer {
+  font-size: 12px;
+  color: #666;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>ASK 反直覺焦慮評估（進階版）</h1>
+<small>ASK-based Anxiety Assessment Dashboard｜Advanced Version</small>
+
+<!-- A 功能 -->
+<div class="section">
+<h2>A. 行為與功能（Function）</h2>
+
+<div class="question">
+<strong>A1. 最近兩週，你「開始一件事」時最接近哪一種？</strong>
+<div class="options">
+<label><input type="radio" name="A1" value="0"> 直接開始</label>
+<label><input type="radio" name="A1" value="1"> 先準備一下</label>
+<label><input type="radio" name="A1" value="2"> 想很多才開始</label>
+<label><input type="radio" name="A1" value="3"> 常直接不開始</label>
+</div>
+</div>
+
+<div class="question">
+<strong>A2. 最近做決定時的狀態？</strong>
+<div class="options">
+<label><input type="radio" name="A2" value="0"> 快速決定</label>
+<label><input type="radio" name="A2" value="1"> 稍微猶豫</label>
+<label><input type="radio" name="A2" value="2"> 拖很久</label>
+<label><input type="radio" name="A2" value="3"> 常交給別人</label>
+</div>
+</div>
+</div>
+
+<!-- B 心理佔用 -->
+<div class="section">
+<h2>B. 心理佔用（Mental Bandwidth）</h2>
+
+<div class="question">
+<strong>B1. 清醒時間中，腦袋被事情佔住的比例？</strong>
+<div class="options">
+<label><input type="radio" name="B1" value="0"> 0–20%</label>
+<label><input type="radio" name="B1" value="1"> 30–40%</label>
+<label><input type="radio" name="B1" value="2"> 50–60%</label>
+<label><input type="radio" name="B1" value="3"> 70%以上</label>
+</div>
+</div>
+
+<div class="question">
+<strong>B2. 是否會反覆想同一件事？</strong>
+<div class="options">
+<label><input type="radio" name="B2" value="0"> 很少</label>
+<label><input type="radio" name="B2" value="1"> 偶爾</label>
+<label><input type="radio" name="B2" value="2"> 常常</label>
+<label><input type="radio" name="B2" value="3"> 幾乎停不下來</label>
+</div>
+</div>
+</div>
+
+<!-- C 可控性 -->
+<div class="section">
+<h2>C. 可控性（Controllability）</h2>
+
+<div class="question">
+<strong>C1. 當你想停止想某些事時？</strong>
+<div class="options">
+<label><input type="radio" name="C1" value="0"> 想停就停</label>
+<label><input type="radio" name="C1" value="1"> 需轉移注意</label>
+<label><input type="radio" name="C1" value="2"> 明知沒用仍停不下</label>
+<label><input type="radio" name="C1" value="3"> 越想停越糟</label>
+</div>
+</div>
+
+<div class="question">
+<strong>C2. 對「不確定」的忍受度？</strong>
+<div class="options">
+<label><input type="radio" name="C2" value="0"> 能接受</label>
+<label><input type="radio" name="C2" value="1"> 有點不舒服</label>
+<label><input type="radio" name="C2" value="2"> 很不舒服</label>
+<label><input type="radio" name="C2" value="3"> 幾乎不能忍</label>
+</div>
+</div>
+</div>
+
+<!-- D 代價 -->
+<div class="section">
+<h2>D. 犧牲與代價（Trade-offs）</h2>
+
+<div class="question">
+<strong>D1. 最近你少了哪些？（可複選）</strong>
+<div class="options">
+<label><input type="checkbox" class="cost"> 睡眠</label>
+<label><input type="checkbox" class="cost"> 效率</label>
+<label><input type="checkbox" class="cost"> 社交</label>
+<label><input type="checkbox" class="cost"> 興趣</label>
+</div>
+</div>
+</div>
+
+<!-- E 預期風險 -->
+<div class="section">
+<h2>E. 持續風險預期（Projected Cost）</h2>
+
+<div class="question">
+<strong>E1. 若再持續 3–6 個月，你最擔心？</strong>
+<div class="options">
+<label><input type="radio" name="E1" value="0"> 不太擔心</label>
+<label><input type="radio" name="E1" value="1"> 有點擔心</label>
+<label><input type="radio" name="E1" value="2"> 明顯擔心</label>
+<label><input type="radio" name="E1" value="3"> 覺得會撐不住</label>
+</div>
+</div>
+</div>
+
+<button onclick="calculate()">計算嚴重度</button>
+
+<div id="result" class="result" style="display:none;"></div>
+
+<div class="footer">
+本工具依《ASK: The Counterintuitive Science of Asking Questions》原則設計，  
+用於臨床評估與教學輔助，非單獨診斷工具。
+</div>
+
+<script>
+function maxRadio(names) {
+  let max = 0;
+  names.forEach(n => {
+    document.getElementsByName(n).forEach(i => {
+      if (i.checked) max = Math.max(max, parseInt(i.value));
+    });
+  });
+  return max;
+}
+
+function calculate() {
+  let scoreA = maxRadio(["A1","A2"]);
+  let scoreB = maxRadio(["B1","B2"]);
+  let scoreC = maxRadio(["C1","C2"]);
+  let costCount = document.querySelectorAll(".cost:checked").length;
+  let scoreD = Math.min(costCount, 3);
+  let scoreE = maxRadio(["E1"]);
+
+  let total = scoreA + scoreB + scoreC + scoreD + scoreE;
+
+  let level = "";
+  let text = "";
+
+  if (total <= 3) {
+    level = "無／極輕度";
+    text = "整體表現接近正常壓力反應，尚未見明顯功能受損。";
+  } else if (total <= 7) {
+    level = "輕度";
+    text = "呈現高功能焦慮樣態，建議留意睡眠與壓力調節。";
+  } else if (total <= 11) {
+    level = "中度";
+    text = "焦慮相關表現已影響日常功能，建議進一步臨床介入。";
+  } else {
+    level = "重度";
+    text = "呈現明顯病理性焦慮，伴隨功能受損，建議積極治療與風險評估。";
+  }
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML = `
+    <h2>自動評估結果</h2>
+    <p><strong>總分：</strong>${total} / 15</p>
+    <p><strong>嚴重度：</strong>${level}</p>
+    <p><strong>臨床解讀：</strong>${text}</p>
+  `;
+}
+</script>
+
+</body>
+</html>
